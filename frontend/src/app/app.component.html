@@ -1,0 +1,25 @@
+<div id="app-container">
+  @if (
+    router.url === "/map" ||
+    router.url.startsWith("/fight") ||
+    router.url === "/magicshop" ||
+    router.url === "/weaponshop" ||
+    router.url === "/arena" ||
+    router.url === "/map" ||
+    router.url === "/kazamata" ||
+    router.url === "/character" ||
+    router.url === "/leaderboard" ||
+    router.url === "/gambling" ||
+    router.url === "/tobaccoshop" ||
+    router.url === "/tavern" ||
+    router.url === "/mail" ||
+    router.url === "/yearbook"
+
+  ) {
+    <sidemenu></sidemenu>
+  }
+  <div id="app-page" class="col center">
+    <router-outlet></router-outlet>
+  </div>
+  <p-toast position="bottom-center"></p-toast>
+</div>

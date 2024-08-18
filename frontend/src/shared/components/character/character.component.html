@@ -1,0 +1,136 @@
+  <div class="characterbox">
+    @if (hero) {
+    <div class="mainboxcontainer" dropzone="copy" (dragover)="onDragOver($event)" (drop)="onDrop($event, 0)">
+      <div class="sideboxcontainer">
+        <div class="sidebox" id="head" (mouseover)="showItemTooltip(0)" (mouseout)="hideItemTooltip(0)" (click)="onButtonClicked('map_button.mp3')">
+          @if (hero.equipmentItems[0]) {
+            <img [src]="hero.equipmentItems[0].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[0]"
+                 [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[0]); hideItemTooltip(0)" />
+            <app-item-tooltip [item]="hero.equipmentItems[0]" *ngIf="displayItemTooltip && tooltipIndex == 0"></app-item-tooltip>
+          }
+        </div>
+        <div class="sidebox" id="upper" (mouseover)="showItemTooltip(1)" (mouseout)="hideItemTooltip(1)" (click)="onButtonClicked('map_button.mp3')">
+          @if (hero.equipmentItems[1]) {
+            <img [src]="hero.equipmentItems[1].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[1]"
+                 [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[1]); hideItemTooltip(1)" />
+            <app-item-tooltip [item]="hero.equipmentItems[1]" *ngIf="displayItemTooltip && tooltipIndex == 1"></app-item-tooltip>
+          }
+        </div>
+        <div class="sidebox" id="lower" (mouseover)="showItemTooltip(2)" (mouseout)="hideItemTooltip(2)" (click)="onButtonClicked('map_button.mp3')">
+          @if (hero.equipmentItems[2]) {
+            <img [src]="hero.equipmentItems[2].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[2]"
+                 [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[2]); hideItemTooltip(2)" />
+            <app-item-tooltip [item]="hero.equipmentItems[2]" *ngIf="displayItemTooltip && tooltipIndex == 2"></app-item-tooltip>
+          }
+        </div>
+      </div>
+      <div class="imagecontainer" [style]="'background-image: url('+ hero.picture +')'"
+           (mouseover)="showCharacterTooltip()" (mouseout)="showCharacterTooltip()">
+        <app-character-tooltip [hero]="hero" *ngIf="displayCharacterTooltip"></app-character-tooltip>
+      </div>
+      <div class="sideboxcontainer">
+        <div class="sidebox" id="belt" (mouseover)="showItemTooltip(3)" (mouseout)="hideItemTooltip(3)" (click)="onButtonClicked('map_button.mp3')">
+          @if (hero.equipmentItems[3]) {
+            <img [src]="hero.equipmentItems[3].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[3]"
+                 [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[3]); hideItemTooltip(3)" />
+            <app-item-tooltip [item]="hero.equipmentItems[3]" *ngIf="displayItemTooltip && tooltipIndex == 3"></app-item-tooltip>
+          }
+        </div>
+        <div class="sidebox" id="ring" (mouseover)="showItemTooltip(4)" (mouseout)="hideItemTooltip(4)" (click)="onButtonClicked('map_button.mp3')">
+          @if (hero.equipmentItems[4]) {
+            <img [src]="hero.equipmentItems[4].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[4]"
+                 [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[4]); hideItemTooltip(4)" />
+            <app-item-tooltip [item]="hero.equipmentItems[4]" *ngIf="displayItemTooltip && tooltipIndex == 4"></app-item-tooltip>
+          }
+        </div>
+        <div class="sidebox" id="special" (mouseover)="showItemTooltip(5)" (mouseout)="hideItemTooltip(5)" (click)="onButtonClicked('map_button.mp3')">
+          @if (hero.equipmentItems[5]) {
+            <img [src]="hero.equipmentItems[5].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[5]"
+                 [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[5]); hideItemTooltip(5)" />
+            <app-item-tooltip [item]="hero.equipmentItems[5]" *ngIf="displayItemTooltip && tooltipIndex == 5"></app-item-tooltip>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="bottomboxcontainer" dropzone="copy" (dragover)="onDragOver($event)" (drop)="onDrop($event, 0)">
+      <app-separator orientation="vertical" [width]="83"></app-separator>
+      <div class="bottombox" id="weapon" (mouseover)="showItemTooltip(6)" (mouseout)="hideItemTooltip(6)" (click)="onButtonClicked('map_button.mp3')">
+        @if (hero.equipmentItems[6]) {
+          <img [src]="hero.equipmentItems[6].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[6]"
+               [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[6]); hideItemTooltip(6)" />
+          <app-item-tooltip [item]="hero.equipmentItems[6]" *ngIf="displayItemTooltip && tooltipIndex == 6"></app-item-tooltip>
+        }
+      </div>
+      <div class="bottombox" id="fight_animation" (mouseover)="showItemTooltip(7)" (mouseout)="hideItemTooltip(7)" (click)="onButtonClicked('map_button.mp3')">
+        @if (hero.equipmentItems[7]) {
+          <img [src]="hero.equipmentItems[7].imageUrl" width="83" height="83" [alt]="hero.equipmentItems[7]"
+               [draggable]="!fromLeaderboardOrShop" (dragstart)="onDragStart($event, hero.equipmentItems[7]); hideItemTooltip(7)" />
+          <app-item-tooltip [item]="hero.equipmentItems[7]" *ngIf="displayItemTooltip && tooltipIndex == 7"></app-item-tooltip>
+        }
+      </div>
+      <app-separator orientation="vertical" [width]="83"></app-separator>
+    </div>
+
+    <div class="statcontainer">
+
+      <div class="statbox">
+        <p class="left-side">kitartás</p>
+        <div class="right-side">
+          <p class="stat">{{hero.endurance}}</p>
+          <button class="add-button" *ngIf="!fromLeaderboardOrShop" (click)="increaseStat('endurance')">
+            <span class="button_top" (mouseover)="showStatIncreaseTooltip()" (mouseout)="showStatIncreaseTooltip()">+</span>
+          </button>
+          <app-stat-increase-tooltip [increaseCost]="nextCosts['endurance']" *ngIf="displayStatIncreaseTooltip"></app-stat-increase-tooltip>
+        </div>
+      </div>
+
+      <div class="statbox" >
+        <p class="left-side">szorgalom</p>
+        <div class="right-side">
+          <p class="stat">{{hero.diligence}}</p>
+          <button class="add-button" *ngIf="!fromLeaderboardOrShop" (click)="increaseStat('diligence')">
+            <span class="button_top" (mouseover)="showStatIncreaseTooltip()" (mouseout)="showStatIncreaseTooltip()">+</span>
+          </button>
+          <app-stat-increase-tooltip [increaseCost]="nextCosts['diligence']" *ngIf="displayStatIncreaseTooltip"></app-stat-increase-tooltip>
+        </div>
+      </div>
+
+      <div class="statbox" >
+        <p class="left-side">intelligencia</p>
+        <div class="right-side">
+          <p class="stat">{{hero.intelligence}}</p>
+          <button class="add-button" *ngIf="!fromLeaderboardOrShop" (click)="increaseStat('intelligence')">
+            <span class="button_top" (mouseover)="showStatIncreaseTooltip()" (mouseout)="showStatIncreaseTooltip()">+</span>
+          </button>
+          <app-stat-increase-tooltip [increaseCost]="nextCosts['intelligence']" *ngIf="displayStatIncreaseTooltip"></app-stat-increase-tooltip>
+        </div>
+      </div>
+
+      <div class="statbox" >
+        <p class="left-side">ügyesség</p>
+        <div class="right-side">
+          <p class="stat">{{hero.dexterity}}</p>
+          <button class="add-button" *ngIf="!fromLeaderboardOrShop" (click)="increaseStat('dexterity')">
+            <span class="button_top" (mouseover)="showStatIncreaseTooltip()" (mouseout)="showStatIncreaseTooltip()">+</span>
+          </button>
+          <app-stat-increase-tooltip [increaseCost]="nextCosts['dexterity']" *ngIf="displayStatIncreaseTooltip"></app-stat-increase-tooltip>
+        </div>
+      </div>
+
+      <div class="statbox" >
+        <p class="left-side">szerencse</p>
+        <div class="right-side">
+          <p class="stat">{{hero.luck}}</p>
+          <button class="add-button" *ngIf="!fromLeaderboardOrShop" (click)="increaseStat('luck')">
+            <span class="button_top" (mouseover)="showStatIncreaseTooltip()" (mouseout)="showStatIncreaseTooltip()">+</span>
+          </button>
+          <app-stat-increase-tooltip [increaseCost]="nextCosts['luck']" *ngIf="displayStatIncreaseTooltip"></app-stat-increase-tooltip>
+        </div>
+      </div>
+
+  </div>
+  } @else {
+  <app-loading></app-loading>
+  }
+</div>

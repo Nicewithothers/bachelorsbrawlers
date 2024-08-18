@@ -1,0 +1,80 @@
+<div class="kazamata-container">
+  <img class="bg-img" ngSrc="../../assets/images/kazamata_background.webp" fill priority>
+  <div class="rectangle">
+    @if(hero && monsters.length > 0) {
+    <div class="carousel-container">
+      <p-carousel 
+        [value]="monsters" 
+        [numVisible]="1" 
+        [numScroll]="1" 
+        [circular]="false" 
+        [page]="hero.dungeonLevel - 1"
+        (onPage)="onCarouselPage($event)">
+        <ng-template let-monster let-i="index" pTemplate="item">
+          <div class="enemy">
+            <div class="header">
+              <span class="name">{{ monster.name }}</span>
+              <span class="motto">{{ monster.motto }}</span>
+            </div>
+            <div class="item-container">
+              <div class="item" 
+              [ngClass]="{
+                  'flipped': monster.flipped,
+                  'below-level': isBelowHeroLevel(monster.dungeonLevel),
+                  'above-level': isAboveHeroLevel(monster.dungeonLevel)
+                }" 
+                [ngStyle]="{'background-image': 'url(' + monster.picture + ')'}"
+                [class.beaten]="hero.dungeonLevel !== monster.dungeonLevel" (click)="toggleFlip(monster)">
+                <div class="front" [ngStyle]="{'background-image': 'url(' + monster.picture + ')'}"></div>
+                <div class="back">
+                  <div class="stats">
+                    <div class="statbox">
+                      <p class="left-side">Max életerő</p>
+                      <div class="right-side">
+                        <p class="stat">{{monster.maxHp}}</p>
+                      </div>
+                    </div>
+                    <div class="statbox">
+                      <p class="left-side">Intelligencia</p>
+                      <div class="right-side">
+                        <p class="stat">{{monster.intelligence}}</p>
+                      </div>
+                    </div>
+                    <div class="statbox">
+                      <p class="left-side">Ügyesség</p>
+                      <div class="right-side">
+                        <p class="stat">{{monster.dexterity}}</p>
+                      </div>
+                    </div>
+                    <div class="statbox">
+                      <p class="left-side">Kitartás</p>
+                      <div class="right-side">
+                        <p class="stat">{{monster.endurance}}</p>
+                      </div>
+                    </div>
+                    <div class="statbox">
+                      <p class="left-side">Szerencse</p>
+                      <div class="right-side">
+                        <p class="stat">{{monster.luck}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ng-container *ngIf="isMonsterCompleted(monster); else notCompleted">
+              <span class="completed">Teljesítve!</span>
+            </ng-container>
+            <ng-template #notCompleted>
+              <button class="brawlers-btn try" (click)="selectBoss()" [disabled]="isAttackButtonDisabled()">Megpróbálom</button>
+            </ng-template>
+            <span *ngIf="currentPosition === hero.dungeonLevel - 1" class="counter">{{ nextDungeonTryTime }}</span>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    } @else {
+    <app-loading class="kazamata-loading"></app-loading>
+    }
+  </div>
+</div>

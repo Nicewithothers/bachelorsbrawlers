@@ -1,0 +1,85 @@
+<div id="gambling-container" class="col center">
+    <img class="bg-img" src="../../assets/images/lottozo.webp">
+    @if (!loading) {
+        @if (testItem) {
+            <div id="scratch-container-wrapper">
+                <div id="scratch-container">
+                    @if (created) {
+                        <div id="hash">{{testItem.serial}}</div>
+                        <div id="pyramid1" class="pyramid">
+                            @for (level of testItem.pyramid1 | keyvalue; track level.key) {
+                                <div class="level">
+                                    @for (item of level.value; track $index) {
+                                        <div>{{item}}</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div id="pyramid2" class="pyramid">
+                            @for (level of testItem.pyramid2 | keyvalue; track level.key) {
+                                <div class="level">
+                                    @for (item of level.value; track $index) {
+                                        <div>{{item}}</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div id="pyramid3" class="pyramid">
+                            @for (level of testItem.pyramid3 | keyvalue; track level.key) {
+                                <div class="level">
+                                    @for (item of level.value; track $index) {
+                                        <div>{{item}}</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+                <!-- <div id="left-info"></div> -->
+            </div>
+            <div class="col center finished-game" style="margin-bottom: 50px; min-height: 56px; gap: 15px">
+                @if (completed && didWin) {
+                    Nyertél {{testItem.allWinnings}} Ft-ot!
+                    <button class="brawlers-btn" (click)="onButtonClicked('map_button.mp3')" (click)="accept()">Beváltás</button>
+                }
+                @if (completed && !didWin) {
+                    Sajnos nem nyertél!
+                    <button class="brawlers-btn" (click)="onButtonClicked('map_button.mp3')" (click)="accept()">Próbálkozz újra!</button>
+                }
+            </div>
+        } @else {
+            <div id="gambling-shop" class="col">
+                <div id="title" class="row center">
+                    Válassz játékaink közül, és tedd próbára a szerencsédet!
+                </div>
+                <div class="row gambling-btn-row">
+                    <button class="gambling-btn">Fáraók kincse</button>
+                    <button class="gambling-btn" disabled>Blackjack</button>
+                    <button class="gambling-btn" disabled>Kincsvadász</button>
+                </div>
+                <div id="game-info" class="row between">
+                    <div class="col" style="font-size: 18px;">
+                        <span>Lehetséges nyeremények:</span>
+                        <span>200 Ft</span>
+                        <span>500 Ft</span>
+                        <span>1000 Ft</span>
+                        <span>2000 Ft</span>
+                        <span>5000 Ft</span>
+                        <span>50000 Ft</span>
+                    </div>
+                    <div class="col center" style="font-size: 20px;">
+                        @if(lastWin) {
+                            <span>Nyertél {{lastWin}} forintot, amit nem váltottál be!</span>
+                            <button class="brawlers-btn" (click)="onButtonClicked('map_button.mp3')" (click)="accept()">Beváltom</button>
+                        } @else {
+                            <span>Ára: 200Ft</span>
+                            <button class="brawlers-btn" (click)="onButtonClicked('map_button.mp3')" (click)="buyKaparos()">Megveszem</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    } @else {
+        <app-loading></app-loading>
+    }    
+</div>

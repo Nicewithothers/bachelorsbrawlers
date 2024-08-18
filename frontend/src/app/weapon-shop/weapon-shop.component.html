@@ -1,0 +1,31 @@
+<div class="shop-container weapon-shop-container">
+  <img class="bg-img" ngSrc="../../assets/images/weapon-shop-bg.webp" fill priority>
+  @if (hero && shopItems) {
+  <div class="character-overview-container">
+    <app-character [fromLeaderboardOrShop]="true"></app-character>
+  </div>
+  <div class="shop-panel-container">
+    <app-inventory [hero]="hero" [fromCharacter]="true"></app-inventory>
+    <div class="shopkeeper-container">
+      <img class="weapon-shopkeeper" ngSrc="../../assets/images/weapon-shopkeeper.webp" width="300" height="250" />
+    </div>
+
+    <div class="new-goods-container">
+      <button class="new-goods-button" (click)="onButtonClicked('map_button.mp3')"  (click)="refreshItems()"><Span class="button-up">Új áru</Span></button>
+    </div>
+    <div class="shop-background">
+      <div class="shop-items-container">
+        @for (item of shopItems; track $index) {
+        <div class="inventory-item" (mouseover)="showItemTooltip($index)" (mouseout)="showItemTooltip($index)">
+          <img [src]="item.imageUrl" onError="this.src='../../assets/images/items/image_placeholder.webp';" width="150" height="150" [alt]="item.name" (dblclick)="buyItem(item)"
+            class="item-image" />
+          <app-item-tooltip [item]="item" *ngIf="displayItemToolTip && tooltipIndex == $index" [bottom]="$index > 2"></app-item-tooltip>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  } @else {
+  <app-loading></app-loading>
+  }
+</div>

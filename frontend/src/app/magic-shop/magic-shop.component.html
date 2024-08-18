@@ -1,0 +1,24 @@
+<div class="shop-container magic-shop-container">
+  <img class="bg-img" ngSrc="../../assets/images/magic-shop-bg.webp" fill priority>
+  <div class="character-overview-container">
+    <app-character></app-character>
+  </div>
+  <div class="shop-panel-container">
+    <app-inventory></app-inventory>
+    <div class="shopkeeper-container">
+      <img
+      class="magic-shopkeeper"
+      ngSrc="../../assets/images/magic-shopkeeper.webp"
+      width="400" height="300"
+    />
+    </div>
+    <div class="new-goods-container">
+      <button class="new-goods-button"  (click)="refreshItems()" ><Span class="button-up">Új árú</Span></button>
+    </div>
+    <div class="shop-background">
+      <div  class="shop-items-container">
+        <img *ngFor="let item of items" [ngSrc]="item.picture" width="150" height="150" alt="Item image" class="item-image">
+      </div>
+    </div>
+  </div>
+</div>

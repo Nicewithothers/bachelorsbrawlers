@@ -1,0 +1,2 @@
+INSERT INTO hero (id, crypto, dexterity, diligence, endurance, forint, intelligence, luck, max_hp, name, xp) 
+VALUES (9999, 20, 3, 4, 2, 1000, 5, 1, 100, 'Test Hero', 10);

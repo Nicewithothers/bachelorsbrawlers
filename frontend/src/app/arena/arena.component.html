@@ -1,0 +1,50 @@
+<div class="arena-container">
+  <img class="bg-img" ngSrc="../../assets/images/arena.webp" fill priority>
+  @if (enemies && enemies.length > 0) {
+    <div class="content-wrapper">
+      <div class="background-rectangle">
+        <div class="characters-container">
+          <div class="choose-opponent">Válassz ellenfelet:</div>
+          @for (enemy of enemies; track $index) {
+          <div class="character-selection" 
+            [class.selected]="this.selectedEnemy === enemy" 
+            (click)="onSelectEnemy(enemy)"
+            (click)="onButtonClicked('map_button.mp3')"
+            >
+            <img class="character-placeholder" [src]="enemy.picture">
+            <div class="brawlers-text-large">{{ enemy.name }}</div>
+            <div class="power">{{ enemy.maxHp }}</div>
+            <div class="character-stats">
+              <div class="character-stat">
+                <p class="left-side">Kitartás</p>
+                <div class="right-side">{{ enemy.endurance }}</div>
+              </div>
+              <div class="character-stat">
+                <p class="left-side">Szorgalom</p>
+                <div class="right-side">{{ enemy.diligence }}</div>
+              </div>
+              <div class="character-stat">
+                <p class="left-side">Intelligencia</p>
+                <div class="right-side">{{ enemy.intelligence }}</div>
+              </div>
+              <div class="character-stat">
+                <p class="left-side">Ügyesség</p>
+                <div class="right-side">{{ enemy.dexterity }}</div>
+              </div>
+              <div class="character-stat">
+                <p class="left-side">Szerencse</p>
+                <div class="right-side">{{ enemy.luck }}</div>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="bottom-wrapper">
+        <button class="explore-button" (click)="chooseEnemy()" (click)="onButtonClicked('map_button.mp3')">Ellenfél kiválasztása</button>
+      </div>
+    </div>
+  } @else {
+    <app-loading></app-loading>
+  }
+</div>

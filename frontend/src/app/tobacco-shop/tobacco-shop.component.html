@@ -1,0 +1,40 @@
+<div class="col">
+  <img class="bg-img" ngSrc="../../assets/images/tobacco-shop.webp" fill priority>
+  @if (hero && !loading) {
+    <div class="tobacco-shop-container">
+      <div class="tobacco-shop-container-header">
+        <h1>Termékek</h1>
+        @if (hero.boosterItem != null) {
+          <h3>Jelenleg aktív: {{hero.boosterItem.name}}</h3>
+        }
+        @else {
+          <h3>Jelenleg nincs aktív booster!</h3>
+        }
+      </div>
+      <div class="tobacco-shop-btns">
+        @for (bItem of boosterItems; track $index) {
+          <button class="tobacco-shop-btn" (click)="onButtonClicked('map_button.mp3')" (click)="onSelect(bItem)" [class.active]="selectedBoosterItem === bItem">{{bItem.name}}</button>
+        }
+      </div>
+      <div class="tobacco-shop-container-body">
+        @if (selectedBoosterItem) {
+          <div class="tobacco-shop-container-item-image">
+            <img class="item-image"
+              ngSrc="../../assets/images/boosteritems/{{selectedBoosterItem.name.replaceAll(' ', '').toLowerCase()}}.png"
+              width="150" height="150" [alt]="selectedBoosterItem.name">
+          </div>
+          <div class="tobacco-shop-container-details">
+            <p>{{selectedBoosterItem.description}}</p>
+            <p>Ennyivel csökkenti a kalandvágy felhasználását: {{selectedBoosterItem.effectiveness*100}}%</p>
+          </div>
+          <div class="tobacco-shop-container-actions">
+            <p>Ára: {{selectedBoosterItem.price}} BTC</p>
+            <button class="brawlers-btn" (click)="onButtonClicked('map_button.mp3')" (click)="updateBoosterItem(selectedBoosterItem.name)">Megveszem</button>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <app-loading></app-loading>
+  }
+</div>

@@ -1,0 +1,177 @@
+itemCategory,name,rarity,damageRange,armor,price,attributeModifierId,fileName
+WEAPON,JATE-s szórólap,COMMON,11,,121,1,jate_szorolap
+WEAPON,Tompa ceruza,COMMON,12,,132,2,tompa_ceruza
+WEAPON,Papucs,COMMON,18,,198,3,papucs
+WEAPON,Öreg banán,COMMON,16,,176,4,oreg_banan
+WEAPON,Feltekert újság,COMMON,14,,154,5,feltekert_ujsag
+WEAPON,Nerf gun,RARE,28,,336,6,nerf
+WEAPON,Serpenyő,RARE,25,,300,7,serpenyo
+WEAPON,Toll,RARE,20,,240,8,toll
+WEAPON,Hosszú bot,RARE,27,,324,9,nagy_bot
+WEAPON,Tompa kés,RARE,23,,276,10,tompa_kes
+WEAPON,Ukulele,UNIQUE,32,1,429,11,ukulele
+WEAPON,Hjszárító,UNIQUE,37,2,507,12,hajszarito
+WEAPON,Fürdőkefe,UNIQUE,33,5,494,13,furdokefe
+WEAPON,Esernyő,UNIQUE,36,2,494,14,esernyo
+WEAPON,Egér golyók zokniban,UNIQUE,30,3,429,15,eger_golyok_zokniban
+WEAPON,RAM bökő,MASTER,40,17,798,16,ram_boko
+WEAPON,Keselyűteknős boton,MASTER,47,14,854,17,snapping_turtle
+WEAPON,A Guitar Hero fegyvere,MASTER,45,13,812,18,guitar_hero
+WEAPON,Mr Massacre 2000,MASTER,49,16,910,19,mr_massacre_2000
+WEAPON,Baseball ütő,MASTER,43,15,812,20,baseball_uto
+WEAPON,Géppisztoly,LEGENDARY,60,27,1305,21,geppisztoly
+WEAPON,Drága billentyűzet,LEGENDARY,52,30,1230,22,billentyuzet
+WEAPON,Extra erős konzervnyitó,LEGENDARY,58,33,1365,23,can_opener
+WEAPON,Chicken Master 3000,LEGENDARY,57,29,1290,24,chicken_master_3000
+WEAPON,Katana,LEGENDARY,54,28,1230,25,katana
+WEAPON,Minecraft csákány,LEGENDARY,51,31,1230,26,minecraft_csakany
+HEAD,Burger King-es papírkorona,COMMON,,12,132,27,burgerking_korona
+HEAD,Fazék,COMMON,,18,198,28,fazek
+HEAD,Bója,COMMON,,14,154,29,boja
+HEAD,Kukafedő,COMMON,,17,187,30,kukafedo
+HEAD,Papírzacskó,COMMON,,16,176,31,papirzacsko
+HEAD,Macsakafüles Gamer RGB fejhallgató,RARE,,23,276,32,macskafules_gamer_rbp_fejhallgato
+HEAD,Arcmaszk,RARE,,26,312,33,arc_maszk
+HEAD,Baseball sapka,RARE,,27,324,34,baseball_sapka
+HEAD,Kapucni,RARE,,24,288,35,kapucni
+HEAD,Úszószemüveg,RARE,,29,348,36,uszoszemuveg
+HEAD,Vonalkódos alsógatya,UNIQUE,1,33,442,37,vonalkodos_alsogatya
+HEAD,Alvómaszk,UNIQUE,5,34,507,38,alvo_maszk
+HEAD,Cowboy kalap,UNIQUE,3,37,520,39,cowboy_kalap
+HEAD,Fejpánt,UNIQUE,4,35,507,40,fejpant
+HEAD,Fényre sötétedő szemüveg,UNIQUE,2,39,533,41,fenyresotetedo_szemuveg
+HEAD,Cilinder,MASTER,12,45,798,42,cilinder
+HEAD,Fedora,MASTER,15,44,826,43,fedora
+HEAD,Pilóta szemüveg,MASTER,13,47,840,44,pilota_szemuveg
+HEAD,Robogós bukósisak,MASTER,12,49,854,45,robogos_bukosisak
+HEAD,Pit Viper napszemüveg,MASTER,14,48,868,46,pit_viper_napszemuveg
+HEAD,Diplomaosztós kalap,LEGENDARY,25,60,1275,47,diplomaosztos_kalap
+HEAD,Google szemüveg,LEGENDARY,24,55,1185,48,google_szemuveg
+HEAD,Foci sisak,LEGENDARY,20,58,1170,49,foci_sisak
+HEAD,Motoros sisak,LEGENDARY,21,59,1200,50,motoros_sisak
+HEAD,Szalmakalap,LEGENDARY,23,53,1140,51,szalmakalap
+UPPER,SZTE-s pulcsi,COMMON,,23,253,52,szte_pulcsi
+UPPER,Farmer kabát,COMMON,,20,220,53,farmer_kabat
+UPPER,Flanel ing,COMMON,,17,187,54,flanel
+UPPER,Galléros póló,COMMON,,15,165,55,galleros_polo
+UPPER,Kötött pulcsi,COMMON,,18,198,56,kotott_pulcsi
+UPPER,Animés póló,RARE,,28,336,57,anime_polo
+UPPER,Crop top,RARE,,26,312,58,croptop
+UPPER,Esőkabát,RARE,,34,408,59,esokabat
+UPPER,Horgász mellény,RARE,,32,384,60,horgasz_melleny
+UPPER,Láthatósági mellény,RARE,,30,360,61,lathatosagi_melleny
+UPPER,Gólyatáboros póló,UNIQUE,1,35,468,62,golyataboros_polo
+UPPER,Adidas melegítő,UNIQUE,1,39,520,63,adidas_melegito
+UPPER,Foci dzseki,UNIQUE,2,40,546,64,foci_kabat
+UPPER,Puffer kabát,UNIQUE,4,43,611,65,puffer
+UPPER,Superman póló,UNIQUE,3,37,520,66,superman_polo
+UPPER,Fehér trikó,MASTER,12,45,798,67,feher_triko
+UPPER,Blézer,MASTER,10,51,854,68,blezer
+UPPER,Bőrkabát,MASTER,13,54,938,69,borkabat
+UPPER,Foci mez,MASTER,13,52,910,70,mez
+UPPER,Ninja póló,MASTER,15,49,896,71,ninja_merch
+UPPER,Ing és nyakkendő,LEGENDARY,23,62,1275,72,ing_es_nyakkendo
+UPPER,Akatsuki köpeny,LEGENDARY,24,65,1335,73,akatsuki_kopeny
+UPPER,Golyóálló mellény,LEGENDARY,25,64,1335,74,golyoallo_melleny
+UPPER,Gucci póló,LEGENDARY,20,58,1170,75,gucci_polo
+UPPER,Szőrme kabát,LEGENDARY,22,60,1230,76,szorme
+LOWER,Mackó nadrág,COMMON,,21,231,77,mackonadrag
+LOWER,Cargo nadrág,COMMON,,18,198,78,cargo
+LOWER,Leggings,COMMON,,17,187,79,leggings
+LOWER,Pizsama nadrág,COMMON,,16,176,80,pizsama
+LOWER,Derékra csavart törülköző,COMMON,,13,143,81,torolkozo
+LOWER,Rövid nadrág,RARE,,27,324,82,rovidnadrag
+LOWER,Terepmintás nadrág,RARE,,32,384,83,terep_nadrag
+LOWER,Jeggings,RARE,,25,300,84,jeggings
+LOWER,Fürdőnadrág,RARE,,29,348,85,furdonadrag
+LOWER,Szakadt farmer,RARE,,30,360,86,szakadt_farmer
+LOWER,Farmer nadrág,UNIQUE,1,35,468,87,farmer_nadrag
+LOWER,Adidas melegítő nadrág,UNIQUE,1,37,494,88,adidas_nadrag
+LOWER,Biciklis nadrág,UNIQUE,3,34,481,89,biciklis_nadrag
+LOWER,Disco nadrág,UNIQUE,2,39,533,90,disco_nadrag
+LOWER,Tütü,UNIQUE,2,41,559,91,tutu
+LOWER,Gatya nélkül,MASTER,9,50,826,92,gatya_nelkul
+LOWER,Fishnet harisnya,MASTER,7,45,728,93,fishnet
+LOWER,Fecske nadrág,MASTER,6,46,728,94,fecske
+LOWER,Kilt,MASTER,8,49,798,95,kilt
+LOWER,Kosaras nadrág,MASTER,9,48,798,96,kosaras_nadrag
+LOWER,Kinőtt ballagási öltönynadrág,LEGENDARY,18,60,1170,97,kinott_ballagasi_oltonynadrag
+LOWER,Bőrnadrág,LEGENDARY,14,57,1065,98,bornadrag
+LOWER,Chaps,LEGENDARY,15,58,1095,99,chaps
+LOWER,Forrónadrág,LEGENDARY,17,55,1080,100,forro_nadrag
+LOWER,Sínadrág,LEGENDARY,16,62,1170,101,sinadrag
+BELT,Cipőfűző,COMMON,,10,110,102,cipofuzo
+BELT,Rendőrségi kordonjelző szalag,COMMON,,11,121,103,rendorsegi_szallag
+BELT,Sál,COMMON,,13,143,104,sal
+BELT,Lánc,COMMON,,17,187,105,lanc
+BELT,Kötél,COMMON,,15,165,106,kotel
+BELT,Bicikli zár,RARE,,28,336,107,biciklizar
+BELT,Telefon kábel,RARE,,24,288,108,telefon_kabel
+BELT,Locsolótömlő,RARE,,26,312,109,slag
+BELT,Műanyag öv,RARE,,29,348,110,muanyag_ov
+BELT,Gumipók,RARE,,23,276,111,gumipok
+BELT,UTP kábel,UNIQUE,1,32,429,112,utp_kabel
+BELT,Biztonsági öv,UNIQUE,3,40,559,113,biztonsagiov
+BELT,Fűző,UNIQUE,1,36,481,114,fuzo
+BELT,Súlyemelő öv,UNIQUE,4,39,559,115,sulyemelo_ov
+BELT,Ugrókötél,UNIQUE,3,34,481,116,ugrokotel
+BELT,Beer Belt,MASTER,11,43,756,117,beer_belt
+BELT,Grappling hook,MASTER,12,42,756,118,grappling_hook
+BELT,Hasitasi,MASTER,11,45,784,119,hasitasi
+BELT,Pisztolytáska,MASTER,10,48,812,120,pisztolytaska
+BELT,Szerszámtartó öv,MASTER,13,47,840,121,szerszamov
+BELT,Bajnoki öv,LEGENDARY,21,57,1170,122,bajnoki_ov
+BELT,Gucci öv,LEGENDARY,20,52,1080,123,gucci_ov
+BELT,Mászó beülő,LEGENDARY,23,60,1245,124,hegymaszo_beulo
+BELT,Fekete öv,LEGENDARY,24,58,1230,125,karateov
+BELT,Töltényöv,LEGENDARY,22,55,1155,126,toltenyov
+RING,Gumicukor,COMMON,17,,187,127,gumicukor
+RING,Buborékfújó,COMMON,15,,165,128,buborekfujo
+RING,Gyorskötöző,COMMON,16,,176,129,gyorskotozo
+RING,Papírgyűrű,COMMON,12,,132,130,papirgyuru
+RING,Ragtapasz,COMMON,18,,198,131,ragtapasz
+RING,Topjoy-os kupak,RARE,24,,288,132,top_joy_kupak
+RING,Befőttes gumi,RARE,22,,264,133,befottes_gumi
+RING,Ring Pop,RARE,23,,276,134,cukor_gyoru
+RING,Hajgumi,RARE,27,,324,135,hajgumi
+RING,DIY gyűrű,RARE,25,,300,136,pinterest_gyuru
+RING,Smart Ring,UNIQUE,36,2,494,137,okos_gyuru
+RING,Tisztasági gyűrű,UNIQUE,35,1,468,138,tisztasagi_gyuru
+RING,Kulcstartó,UNIQUE,31,4,455,139,kulcstarto
+RING,Koponyás gyűrű,UNIQUE,33,3,468,140,koponyas_gyuru
+RING,Feltámadás Köve,UNIQUE,37,1,494,141,feltamadas_kove
+RING,Chio Taccos chips,MASTER,41,13,756,142,chio_taccos_chips
+RING,Gránát biztosító gyűrű,MASTER,47,8,770,143,kibiztosito_gyuru
+RING,A tíz gyűrű,MASTER,45,11,784,144,atizgyuru_gyuru
+RING,Ouroboros,MASTER,43,12,770,145,ouroboros
+RING,Pecsétgyűrű,MASTER,49,10,826,146,pecsetgyuru
+RING,Az Egy Gyűrű,LEGENDARY,57,15,1080,147,az_egy_gyuru
+RING,Bajnoki gyűrű,LEGENDARY,55,17,1080,148,bajnoki_gyuru
+RING,Boxer,LEGENDARY,58,16,1110,149,boxer
+RING,Gyémánt gyűrű,LEGENDARY,52,20,1080,150,gyemant_gyuru
+RING,Zöld Lámpás gyűrű,LEGENDARY,54,18,1080,151,zoldlampas_gyuru
+SPECIAL,ChatGPT előfizetés,COMMON,4,3,77,152,chatgpt_elofizetes
+SPECIAL,Vezetékes telefon,COMMON,5,2,77,153,vonalas
+SPECIAL,Számológép,COMMON,1,6,77,154,szamologep
+SPECIAL,ORBIT rágó,COMMON,2,4,66,155,rago
+SPECIAL,Lidl kóla,COMMON,3,4,77,156,lidl_cola
+SPECIAL,Bootable Linux USB drive,RARE,10,8,216,157,bootable_linux_usb_drive
+SPECIAL,JBL hangszóró,RARE,6,11,204,158,jbl
+SPECIAL,Kulacs,RARE,7,13,240,159,kulacs
+SPECIAL,Lipton tea,RARE,13,6,228,160,lipton_tea
+SPECIAL,Nokia mobiltelefon,RARE,5,14,228,161,nokia
+SPECIAL,Dékáni méltányossági,UNIQUE,10,16,338,162,dekanyi_meltanyossagi
+SPECIAL,Coca-Cola,UNIQUE,19,10,377,163,cocacola
+SPECIAL,Power bank,UNIQUE,11,18,377,164,power_bank
+SPECIAL,Samsung Mini mobiltelefon,UNIQUE,16,13,377,165,samsung_mini
+SPECIAL,Okosóra,UNIQUE,17,12,377,166,smart_watch
+SPECIAL,Kőbányai világos,MASTER,15,21,504,167,kobanyai_vilagos
+SPECIAL,AirPods,MASTER,20,17,518,168,airpods
+SPECIAL,Android telefon,MASTER,15,23,532,169,android
+SPECIAL,Laptop,MASTER,14,24,532,170,laptop
+SPECIAL,Rubik Kocka,MASTER,23,16,546,171,rubik_kocka
+SPECIAL,Diploma,LEGENDARY,27,30,855,172,diploma
+SPECIAL,Bicikli,LEGENDARY,30,25,825,173,bicikli
+SPECIAL,Gamer szék,LEGENDARY,28,26,810,174,gamer_szek
+SPECIAL,iPhone,LEGENDARY,25,28,795,175,iphone
+SPECIAL,Asztali számítógép,LEGENDARY,26,29,825,176,pc

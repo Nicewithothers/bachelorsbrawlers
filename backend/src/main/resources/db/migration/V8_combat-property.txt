@@ -1,0 +1,2 @@
+ALTER TABLE Hero ADD COLUMN IF NOT EXISTS dungeon_level integer;
+ALTER TABLE Monster ADD COLUMN IF NOT EXISTS dungeon_level integer;

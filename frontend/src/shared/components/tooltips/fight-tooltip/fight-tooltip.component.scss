@@ -1,0 +1,18 @@
+.fight-tooltip{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.fight-tooltip-name{
+    grid-column: 2 / 3;
+}
+
+.fight-tooltip-enemy{
+    grid-column: 3 / 5;
+}
+
+.fight-info{
+    margin: 0;
+    white-space: nowrap;
+}

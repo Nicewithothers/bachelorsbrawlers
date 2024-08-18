@@ -1,0 +1,11 @@
+INSERT INTO Boss (name, max_hp, intelligence, luck, endurance, dexterity, damage_range, item_id, stat_type, stat_increase_percentage, drop_chance)
+VALUES  
+    ('Szamitogep halozatok', 50, 10, 5, 8, 12, 20, 1, NULL, NULL, 1),
+    ('Operacios rendszerek', 70, 20, 10, 15, 20, 25, 2, NULL, NULL, 1), 
+    ('Web tervezes', 90, 25, 15, 20, 25, 30, NULL, 'endurance', 15, 0.3),
+    ('Diszkret matematika I', 130, 35, 25, 30, 35, 40, NULL, 'intelligence', 10, 0.2), 
+    ('Architekturak', 150, 40, 30, 35, 40, 45, 3, NULL, NULL, 1),
+    ('Fizika I', 170, 45, 35, 40, 45, 50, NULL, 'diligence', 20, 0.3),
+    ('Programozas alapjai', 190, 50, 40, 45, 50, 55, NULL, 'dexterity', 20, 0.5),
+    ('Logika', 210, 55, 45, 50, 55, 60, 4, NULL, NULL, 1),
+    ('Kalkulus I', 230, 60, 50, 55, 60, 65, NULL, 'intelligence', 30, 0.4);

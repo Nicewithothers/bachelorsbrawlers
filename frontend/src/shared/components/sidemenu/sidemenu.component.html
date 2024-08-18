@@ -1,0 +1,50 @@
+<div class="sidebar">
+  @if (hero) {
+    <div class="top-section">
+      <img
+        routerLink="/character"
+        [src]="hero.picture"
+        width="70"
+        height="69"
+        (mouseover)="showCharacterTooltip()"
+        (mouseout)="showCharacterTooltip()"
+        (click)="onButtonClicked('menu_button.mp3')"
+      />
+      @if (displayCharacterTooltip) {
+        <app-character-tooltip [hero]="hero"></app-character-tooltip>
+      }
+      <div class="money-container">
+        <div class="money-content">
+          <img ngSrc="../../assets/images/Ft.webp" width="150" height="150" class="icon"/>
+          <p class="money">{{hero.forint}}</p>
+        </div>
+        <div class="extra-money-content">
+          <img ngSrc="../../assets/images/btc.webp" width="150" height="150" class="icon"/>
+          <p class="extra-money">{{hero.crypto}}</p>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <app-loading [small]="true"></app-loading>
+  }
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/map">Térkép</button>
+  <app-separator [width]="230"></app-separator>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/tavern">Mars tér</button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/arena">Négylépcsős</button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/weaponshop">Árkád</button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/tobaccoshop">Dohi</button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/kazamata">Vizsgák</button>
+  <app-separator [width]="230"></app-separator>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/mail">Posta<span *ngIf="unreadCount !== null" class="unread-indicator">{{ unreadCount }}</span></button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/leaderboard">Ranglista</button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/yearbook">Évkönyv</button>
+  <button (click)="onButtonClicked('menu_button.mp3')" routerLink="/gambling">Szerencsejáték</button>
+
+  <div class="bottom">
+    <div class="bottom-left">
+      <i class="brawlers-icon-btn pi pi-cog" (click)="onButtonClicked('menu_button.mp3')"></i>
+      <i class="brawlers-icon-btn pi pi-question" (click)="showHelp()" (click)="onButtonClicked('menu_button.mp3')"></i>
+    </div>
+    <i class="brawlers-icon-btn pi pi-sign-out" (click)="signOut()" (click)="onButtonClicked('menu_button.mp3')"></i>
+  </div>
+</div>

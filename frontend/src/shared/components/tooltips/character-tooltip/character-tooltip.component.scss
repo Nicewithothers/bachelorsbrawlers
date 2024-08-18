@@ -1,0 +1,11 @@
+.character-tooltip{
+    display: grid;
+    grid-template-columns: repeat(2, fit-content(300px));
+    column-gap: 20px;
+    top: 0;
+    transform: translateY(40%);
+}
+
+.character-info{
+    margin: 0;
+}

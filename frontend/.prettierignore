@@ -1,0 +1,11 @@
+# Ignore artifacts:
+build
+coverage
+
+#Ignore non-formatable files
+*.json
+*.yml
+*.md
+**/*.spec.ts
+**/*.config.ts
+**/assets

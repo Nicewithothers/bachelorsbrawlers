@@ -1,0 +1,43 @@
+<div class="tooltip-container item-tooltip" [class.bottom]="bottom">
+    <div class="item-info">
+        <div class="head">
+            <span class="title" [ngStyle]="{'color': getItemColor(item.rarity)}">{{item.name}}</span>
+            <span class="rarity" [ngStyle]="{'color': getItemColor(item.rarity)}">{{item.rarity}}</span>
+            <span class="category">{{item.itemCategory}}</span>
+        </div>
+        <div class="separator" ></div>
+        <div class="attr" *ngIf="item.damageRange">
+            <span>Sebzés: </span>
+            <span>{{item.damageRange}}</span>
+        </div>
+        <div class="attr" *ngIf="item.armor">
+            <span>Páncél: </span>
+            <span>{{item.armor}}</span>
+        </div>
+        <div class="separator" ></div>
+        <div class="attr" *ngIf="item.attributeModifiers.maxHpModifier">
+            <span>Max életerő: </span>
+            <span>{{item.attributeModifiers.maxHpModifier}}</span>
+        </div>
+        <div class="attr" *ngIf="item.attributeModifiers.intelligenceModifier">
+            <span>Intelligencia: </span>
+            <span>{{item.attributeModifiers.intelligenceModifier}}</span>
+        </div>
+        <div class="attr" *ngIf="item.attributeModifiers.luckModifier">
+            <span>Szerencse: </span>
+            <span>{{item.attributeModifiers.luckModifier}}</span>
+        </div>
+        <div class="attr" *ngIf="item.attributeModifiers.enduranceModifier">
+            <span>Kitartás: </span>
+            <span>{{item.attributeModifiers.enduranceModifier}}</span>
+        </div>
+        <div class="attr" *ngIf="item.attributeModifiers.dexterityModifier">
+            <span>Ügyesség: </span>
+            <span>{{item.attributeModifiers.dexterityModifier}}</span>
+        </div>
+        <div class="price-container">
+            <span class="price">{{item.price}}</span>
+            <img ngSrc="../../assets/images/Ft.webp" width="15" height="15"  />
+        </div>
+    </div>
+</div>

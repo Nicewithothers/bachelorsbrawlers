@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  position: relative;
+
+  .leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    top: 36px;
+    left: 292px;
+    background-color: rgba(234, 198, 150, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    border: solid 3px #765827;
+    p-table {
+      width: 486px;
+      height: 692px;
+      border-collapse: collapse;
+    }
+  }
+
+  .custom-header th {
+    border-bottom: 1.5px solid black;
+    background-color: transparent;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: "Inika";
+    color: black;
+    font-size: 20px;
+  }
+
+  .table-row {
+    background-color: rgb(0, 0, 0, 0);
+    color: #000000;
+    transition: background-color 0.3s ease;
+  }
+
+  .table-row.selected-row {
+    background-color: #c8ae7d;
+  }
+
+  td {
+    border-bottom: 1.5px solid black;
+    background-color: transparent;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: "Inika";
+    color: black;
+    font-size: 20px;
+  }
+
+  .clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+  }
+
+  .bottom {
+    background-color: transparent;
+  }
+}
+
+::ng-deep .p-datatable {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+::ng-deep .p-paginator {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

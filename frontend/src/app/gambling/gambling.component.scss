@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+#scratch-container-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #left-info {
+        position: absolute;
+        z-index: 20;
+        left: 25%;
+        top: 75%;
+    }
+
+    #right-info {
+        position: absolute;
+        z-index: 20;
+        left: 90%;
+        top: 75%;
+    }
+
+    #scratch-container {
+        position: relative;
+        #hash {
+            position: absolute;
+            right: -53px;
+            top: 315px;
+            font-weight: 700;
+            font-size: 18px;
+            transform: rotate(-90deg);
+            z-index: 2000;
+        }
+
+        #pyramid1 {
+            left: 331px;
+            top: 167px;
+        }
+
+        #pyramid2 {
+            left: 544px;
+            top: 75px;
+        }
+
+        #pyramid3 {
+            left: 504px;
+            top: 277px;
+        }
+
+        .pyramid {
+            position: absolute;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            font-size: 30px;
+            user-select: none;
+            pointer-events: none;
+            .level {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              gap: 8px;
+              div {
+                width: 38px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+          }
+    }
+}
+
+#gambling-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#gambling-shop {
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-bottom: 10%;
+    height: 300px;
+    align-items: center;
+    width: max-content;
+    font-weight: 400;
+    background-color: rgba(234, 198, 150, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    border: solid 3px #765827;
+
+    #title {
+        font-size: 22px;
+        padding: 8px 24px;
+    }
+}
+
+.gambling-btn-row {
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    width: 100%;
+}
+
+.gambling-btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 43px;
+    width: 100%;
+    font-size: 22px;
+    :hover :not(:disabled) {
+        cursor: pointer;
+    }
+    
+}
+
+.gambling-btn:disabled {
+    background-color: rgba(115, 115, 115, 0.5) !important;
+    border-left: solid 1px rgba(0, 0, 0, 1) !important;
+    border-bottom: solid 1px rgba(0, 0, 0, 1) !important;
+    color: rgba(79, 79, 79, 1);
+}
+
+#game-info {
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+
+    .brawlers-btn {
+        font-size: 20px;
+    }
+}
+
+.finished-game {
+    font-size: 24px;
+}

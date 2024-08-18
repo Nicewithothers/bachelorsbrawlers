@@ -1,0 +1,245 @@
+.kazamata-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+
+  .rectangle {
+    width: 900px;
+    height: 800px;
+    border: 3px 0px 0px 0px;
+    background-color: #c8ae7df2;
+    border: 3px solid #65451f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    position: relative;
+
+    .kazamata-loading {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .nav-left,
+    .nav-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 300px;
+      height: 360px;
+      cursor: pointer;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    .nav-left {
+      left: 0;
+    }
+
+    .nav-right {
+      right: 0;
+    }
+
+    .counter {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .carousel-container {
+      height: 700px;
+      margin: 0;
+      width: 900px;
+      // display: flex;
+      // flex-direction: column;
+      display: grid;
+      grid-template-rows: 260px 10px;
+      grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 1fr;
+      align-items: center;
+      justify-items: center;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+
+      .name {
+        font-size: 40px;
+        font-weight: bold;
+        color: #65451f;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+      }
+
+      .motto {
+        font-size: 20px;
+        font-weight: bold;
+        color: #65451f;
+        margin-bottom: 10px;
+      }
+    }
+
+    .item-container {
+      perspective: 1000px;
+    }
+
+    .item {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      border: solid 2px #65451f;
+      border-radius: 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .item.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .item .front,
+    .item .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 4px;
+      border: solid 1px #65451f;
+    }
+
+    .item .front {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .item .back {
+      background-color: #c8ae7df2;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .item .back {
+      filter: none;
+    }
+
+    .below-level .front {
+      filter: grayscale(100%);
+    }
+
+    .above-level .front {
+      filter: blur(4px);
+    }
+
+    .item .back {
+      filter: none;
+    }
+
+    .completed {
+      font-weight: bold;
+      font-size: 30px;
+      color: #07561a;
+      margin-top: 40px;
+    }
+
+  }
+}
+
+.enemy {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.stats {
+  margin-left: 7rem;
+}
+
+.try {
+  margin-top: 2rem;
+}
+
+.statbox {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height: 30px;
+  gap: 3rem;
+
+  .right-side {
+    display: grid;
+    position: relative;
+    grid-template-columns: 2fr 6fr 1fr;
+    height: 30px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+::ng-deep {
+  p-carousel {
+    height: 100%;
+    width: 900px;
+  }
+
+  .p-carousel {
+    height: 790px;
+  }
+
+  .p-carousel-content {
+    height: 100%;
+    overflow: visible;
+  }
+
+  .p-carousel-container {
+    height: 100%;
+  }
+
+  .p-carousel-prev {
+    color: #65451f;
+  }
+
+  .p-carousel-next {
+    color: #65451f;
+  }
+
+  .p-carousel-dot-active {
+    color: #65451f;
+    background-color: #65451f;
+    border-radius: 5px;
+  }
+
+  .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+    width: 1rem;
+    height: 1rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    border-radius: 50%;
+  }
+
+}

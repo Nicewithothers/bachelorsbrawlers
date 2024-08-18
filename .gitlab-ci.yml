@@ -1,0 +1,80 @@
+variables:
+  VERCEL_TOKEN: "ITBfefTK9pCOBrABCllT1fWD"
+  HEROKU_APP_NAME: "bachelors-brawlers-szte"
+  HEROKU_PRODUCTION_KEY: "ad9945cb-e037-42c7-8bbe-95d56763766f"
+
+stages:
+  # - frontend-code-check
+  # - backend-code-check
+  - build
+  - deploy
+
+# frontend-code-check:
+#   stage: frontend-code-check
+#   image: node:latest
+#   script:
+#     - cd frontend
+#     - npm ci
+#     - npx prettier . --check
+#   rules:
+#     - changes:
+#         - frontend/*
+#   allow_failure: true
+
+# backend-code-check:
+#   stage: backend-code-check
+#   image: maven:latest
+#   script:
+#     - cd backend
+#     - mvn compile -Dcheckstyle.config.location="../checkstyle.xml"
+#   rules:
+#     - changes:
+#         - backend/*
+#   allow_failure: true
+
+backend-build:
+  stage: build
+  image: maven:latest
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-maven-dependencies
+    paths:
+      - backend/.m2/repository
+  script:
+    - cd backend
+    - mvn clean install -DskipTests=true springdoc-openapi:generate
+
+frontend-build:
+  stage: build
+  image: node:latest
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-node-modules
+    paths:
+      - frontend/node_modules/
+  script:
+    - cd frontend
+    - npm ci --cache .npm --prefer-offline
+    - npm run build
+
+deploy_frontend:
+  stage: deploy
+  image: node:latest
+  only:
+    - main
+  script:
+    - cd frontend
+    - npm install --global vercel
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel build --prod --token=$VERCEL_TOKEN
+    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+
+deploy_backend:
+  stage: deploy
+  image: ruby:latest
+  only:
+    - main
+  script:
+    - cd backend
+    - apt-get update -yq
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider="heroku" --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY --strategy=api

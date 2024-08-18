@@ -1,0 +1,87 @@
+<h2 class="brawlers-text-large" style="text-align: center;">A táskám</h2>
+<div class="inventory-container" dropzone="copy" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+    <!-- @if (!loading) { -->
+        <div class="inventory-item" (mouseover)="showItemTooltip(0)" (mouseout)="hideItemTooltip(0)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[0]) {
+                <img [src]="hero.backpackItems[0].imageUrl" width="150" height="150" [alt]="hero.backpackItems[0].name"
+                    (dblclick)="sellItem(hero.backpackItems[0].name)"
+                    [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[0]); hideItemTooltip(0)">
+                <app-item-tooltip [item]="hero.backpackItems[0]" *ngIf="displayItemTooltip && tooltipIndex == 0"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(1)" (mouseout)="hideItemTooltip(1)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[1]) { 
+                <img [src]="hero.backpackItems[1].imageUrl" width="150" height="150" [alt]="hero.backpackItems[1].name"
+                    (dblclick)="sellItem(hero.backpackItems[1].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[1]); hideItemTooltip(1)">
+                <app-item-tooltip [item]="hero.backpackItems[1]" *ngIf="displayItemTooltip && tooltipIndex == 1"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(2)" (mouseout)="hideItemTooltip(2)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[2]) {
+                <img [src]="hero.backpackItems[2].imageUrl" width="150" height="150" [alt]="hero.backpackItems[2].name"
+                    (dblclick)="sellItem(hero.backpackItems[2].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[2]); hideItemTooltip(2)">
+                <app-item-tooltip [item]="hero.backpackItems[2]" *ngIf="displayItemTooltip && tooltipIndex == 2"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(3)" (mouseout)="hideItemTooltip(3)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[3]) {
+                <img [src]="hero.backpackItems[3].imageUrl" width="150" height="150" [alt]="hero.backpackItems[3].name"
+                    (dblclick)="sellItem(hero.backpackItems[3].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[3]); hideItemTooltip(3)">
+                <app-item-tooltip [item]="hero.backpackItems[3]" *ngIf="displayItemTooltip && tooltipIndex == 3"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(4)" (mouseout)="hideItemTooltip(4)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[4]) {
+                <img [src]="hero.backpackItems[4].imageUrl" width="150" height="150" [alt]="hero.backpackItems[4].name"
+                    (dblclick)="sellItem(hero.backpackItems[4].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[4]); hideItemTooltip(4)">
+                <app-item-tooltip [item]="hero.backpackItems[4]" *ngIf="displayItemTooltip && tooltipIndex == 4"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(5)" (mouseout)="hideItemTooltip(5)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[5]) {
+                <img [src]="hero.backpackItems[5].imageUrl" width="150" height="150" [alt]="hero.backpackItems[5].name"
+                    (dblclick)="sellItem(hero.backpackItems[5].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[5]); hideItemTooltip(5)">
+                <app-item-tooltip [item]="hero.backpackItems[5]" *ngIf="displayItemTooltip && tooltipIndex == 5"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(6)" (mouseout)="hideItemTooltip(6)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[6]) {
+                <img [src]="hero.backpackItems[6].imageUrl" width="150" height="150" [alt]="hero.backpackItems[6].name"
+                    (dblclick)="sellItem(hero.backpackItems[6].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[6]); hideItemTooltip(6)">
+                <app-item-tooltip [item]="hero.backpackItems[6]" *ngIf="displayItemTooltip && tooltipIndex == 6"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(7)" (mouseout)="hideItemTooltip(7)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[7]) {
+                <img [src]="hero.backpackItems[7].imageUrl" width="150" height="150" [alt]="hero.backpackItems[7].name"
+                    (dblclick)="sellItem(hero.backpackItems[7].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[7]); hideItemTooltip(7)">
+                <app-item-tooltip [item]="hero.backpackItems[7]" *ngIf="displayItemTooltip && tooltipIndex == 7"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(8)" (mouseout)="hideItemTooltip(8)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[8]) {
+                <img [src]="hero.backpackItems[8].imageUrl" width="150" height="150" [alt]="hero.backpackItems[8].name"
+                    (dblclick)="sellItem(hero.backpackItems[8].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[8]); hideItemTooltip(8)">
+                <app-item-tooltip [item]="hero.backpackItems[8]" *ngIf="displayItemTooltip && tooltipIndex == 8"></app-item-tooltip>
+            }
+        </div>
+        <div class="inventory-item" (mouseover)="showItemTooltip(9)" (mouseout)="hideItemTooltip(9)" (click)="onButtonClicked('map_button.mp3')">
+            @if (hero.backpackItems && hero.backpackItems[9]) {
+                <img [src]="hero.backpackItems[9].imageUrl" width="150" height="150" [alt]="hero.backpackItems[9].name"
+                    (dblclick)="sellItem(hero.backpackItems[9].name)"
+                     [draggable]="!fromCharacter" (dragstart)="onDragStart($event, hero.backpackItems[9]); hideItemTooltip(9)">
+                <app-item-tooltip [item]="hero.backpackItems[9]" *ngIf="displayItemTooltip && tooltipIndex == 9"></app-item-tooltip>
+            }
+        </div>
+    <!-- } @else {
+        <app-loading></app-loading>
+    } -->
+</div>

@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap");
+
+.fight-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  overflow-y: auto;
+  // background-image: url("/assets/img/szecheny.webp");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+
+  h2 {
+    color: #ffe500;
+    margin-bottom: 0 !important;
+  }
+
+  h3 {
+    margin-top: 0 !important;
+    color: #f0d800;
+  }
+
+  .combatants {
+    display: flex;
+    width: 1200px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 100px;
+
+    .player,
+    .enemy {
+      background-color: #c8ae7d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      max-width: 350px;
+      width: 350px;
+      // max-height: 500px;
+      height: 400px;
+      border: 2px solid #000;
+      font-family: "Inika", sans-serif;
+      margin-top: 100px;
+
+      .img-wrapper {
+        width: 300px;
+        height: 300px;
+        padding: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .character-info {
+        p {
+          font-weight: bold;
+          margin-top: 0;
+          font-size: 25px;
+          margin: 0 50px 15px 50px;
+        }
+
+        .health-bar {
+          display: flex;
+          text-align: center;
+          width: 100%;
+          height: 30px;
+          background-color: #ddd;
+          border-radius: 10px;
+          margin-top: 10px;
+          position: relative;
+
+          .health-fill {
+            margin: 0;
+            height: 100%;
+            border-radius: 10px;
+            background-color: #4caf50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .health-text {
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      .attribute {
+        width: 88%;
+
+        ul.attribute-list {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+
+          li.attribute-item {
+            margin-bottom: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            .attribute-label {
+              margin-right: 10px;
+            }
+
+            .attribute-value {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .versus {
+      font-size: 24px;
+      height: 100%;
+      position: relative;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      canvas {
+        position: absolute;
+      }
+      // margin: 15rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // canvas {
+      //   width: 50%;
+      //   position: absolute;
+      //   z-index: 1;
+      // }
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    border: none;
+    color: white;
+    padding: 7px 54px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #65451f;
+  }
+
+  .battle-log {
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+}
+
+.brawlers-icon-btn {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.animated-text {
+  position: absolute;
+  color: rgba(250, 255, 0, 1);
+  font-weight: bold;
+  font-size: 32px;
+  pointer-events: none; /* Prevent text from interfering with button clicks */
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}

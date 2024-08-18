@@ -1,0 +1,222 @@
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.yearbook-container {
+  overflow: hidden;
+}
+
+.student-list-container {
+  background-image: url("../../assets/images/yearbook.webp");
+
+
+  .yearbook-img {
+    width: 70% !important;
+    left: 20% !important;
+    top: 0 !important;
+    opacity: 1;
+  }
+
+  .student-list-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+
+    width: 63%;
+    height: 70%;
+    left: 23%;
+    top: 15%;
+    position: absolute;
+
+    .student-list-item {
+      .student-list-item-img {
+        background-color:#C8AE7D;
+        border: 3px solid #65451F;
+        min-height:150px;
+      }
+
+      height: 100px;
+      width: 150px;
+      margin: 30px 75px 150px;
+      text-align:center;
+    }
+
+    .page-stuff {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .page-button {
+
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 20px;
+
+      }
+
+      .page-number {
+        font-size: 40px;
+        color: black;
+      }
+    }
+
+  }
+}
+
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.mail-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  width: 90%; /* Adjust width to make the boxes thinner */
+}
+
+.mail-list-panel, .mail-details-panel {
+  flex: 1;
+  background-color: rgba(200, 174, 125, 0.6); /* Reduced opacity */
+  border: 3px solid #765827; /* Wider border */
+  border-radius: 0; /* Pointy corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mail-list-panel {
+  margin-right: 40px; /* Increase space between the panels */
+}
+
+.mail-list-panel h1, .mail-details-panel h1 {
+  text-align: center;
+  font-family: "Inika", serif;
+  color: black;
+  font-size: 30px; /* Increase font size for the main header */
+  margin-bottom: 10px; /* Adjust margin for better spacing */
+  height: 0; /* Reduce height */
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+}
+
+.separator {
+  width: calc(100% + 40px); /* Make separators full width */
+  border: none;
+  border-top: 2px solid black; /* Standard separator thickness */
+  margin: 10px -20px; /* Adjust margin for better spacing */
+}
+
+.separator.bottom-separator {
+  margin-top: -2px; /* Ensure it aligns with the last row separator */
+  margin-bottom: 0; /* Ensure it aligns with the bottom separator line */
+}
+
+.short-separator {
+  width: 100%; /* Shorter separators */
+  border: none;
+  border-top: 2px solid black; /* Standard separator thickness */
+  margin: 10px auto; /* Center the short separators */
+}
+
+.mail-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Start at the top separator */
+  margin-top: -10px; /* Adjust the margin to start at the top separator */
+}
+
+.mail-table {
+  width: 100%;
+  border-collapse: collapse;
+  flex: 1; /* Ensure the table takes full height */
+  margin: 0; /* Remove bottom margin to avoid pushing the arrows down */
+}
+
+.mail-row td {
+  padding: 10px;
+  font-family: "Inika", serif;
+  font-size: 22px; /* Increase font size */
+  cursor: pointer;
+  background-color: rgba(200, 174, 125, 0.0); /* Set the same background color and opacity as the box */
+  border-bottom: 2px solid black; /* Thinner separator lines between rows */
+  height: calc((100vh - 140px - 60px) / 11); /* Calculate height to fill the container, taking into account paddings and margins */
+}
+
+.mail-row.selected td {
+  background-color: rgba(255, 255, 255, 0.3); /* Highlight selected row */
+}
+
+.mail-row.unseen td {
+  background-color: rgba(250, 210, 180, 0.8); /* Change color for unseen mails */
+}
+
+.mail-row.empty-row td {
+  background-color: rgba(200, 174, 125, 0.0); /* Match the background color of the box */
+  cursor: default; /* Ensure cursor does not change for empty rows */
+}
+
+.mail-details-panel h1 {
+  height: 0; /* Reduce height to create space at the top */
+  text-align: center; /* Center the text horizontally */
+}
+
+.detail-row {
+  padding: 10px 0;
+  font-family: "Inika", serif;
+  font-size: 26px; /* Increase font size */
+  color: black;
+}
+
+.message-box {
+  flex: 1;
+  padding: 10px 0;
+  font-family: "Inika", serif;
+  font-size: 22px; /* Increase font size */
+  color: black;
+  overflow-y: auto; /* Ensure the message box is scrollable if the content is too long */
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0; /* Align pagination with bottom separator */
+  padding-top: 10px;
+}
+
+.arrow {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #765827;
+}
+
+.arrow:hover {
+  color: #000;
+}

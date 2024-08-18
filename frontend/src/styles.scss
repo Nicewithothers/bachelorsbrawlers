@@ -1,0 +1,364 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/themes/mytheme/theme.scss";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+@font-face {
+  font-family: "Inika";
+  src: url("./assets/resources/fonts/Inika-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inika";
+  src: url("./assets/resources/fonts/Inika-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  border: 10px solid #765827;
+}
+
+body {
+  margin: 0;
+  font-family: "Inika", "Times New Roman", Times, serif;
+  background-color: rgba(234, 198, 150, 1);
+}
+
+#app-page>*:not(router-outlet) {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leaflet-marker-icon {
+
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    width: max-content;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid $textColor;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  &:hover .tooltip {
+    display: block;
+  }
+
+  .image {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 15px white;
+  }
+}
+
+.leaflet-marker-pane img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.evenly {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.brawlers-field {
+  min-width: 300px;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  border: solid 3px rgba(101, 69, 31, 1);
+  background-color: rgba(118, 88, 39, 0.95);
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 0 8px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+input::-webkit-input-placeholder {
+  /* Edge */
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+input:-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+input::-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.brawlers-auth-switch:hover {
+  opacity: 0.8;
+}
+
+.brawlers-btn {
+  height: 56px;
+  padding: 0 15px;
+  font-size: 25px;
+  line-height: 33px;
+  background-color: rgba(101, 69, 31, 1);
+  border: solid 2px rgba(0, 0, 0, 1);
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: rgba(216, 216, 216, 1);
+}
+
+.brawlers-btn:disabled {
+  color: rgba(100, 100, 100, 1);
+}
+
+.brawlers-btn:hover:not(:disabled) {
+  cursor: pointer;
+  color: rgba(180, 180, 180, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.brawlers-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(118, 88, 39, 1);
+  padding: 4px 8px;
+  gap: 8px;
+}
+
+.brawlers-icon-btn {
+  width: 43px;
+  height: 43px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  background-color: rgba(200, 174, 125, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brawlers-icon-btn:hover:not(:disabled) {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.brawlers-title {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 65px;
+  color: rgba(250, 255, 0, 1);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.brawlers-subtitle {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 33px;
+  -webkit-text-stroke: 0.75px rgba(0, 0, 0, 1);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 0, 255);
+  text-decoration: none;
+}
+
+.brawlers-text-large {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 33px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+// Toast messages
+
+
+.p-toast {
+  >.p-element:not(button) {
+    width: 100%;
+    flex: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    border: 3px solid rgba(101, 69, 31, 1);
+    background-color: rgba(200, 174, 125, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+
+  .p-toast-message {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: rgba(23, 23, 23, 1);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .p-toast-message-content {
+    width: 100%;
+    display: flex;
+  }
+
+  .p-toast-message.p-toast-message-success .p-toast-message-icon {
+    border: solid 3px rgba(23, 23, 23, 1);
+    background-color: rgba(107, 224, 88, 1);
+    .p-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .p-toast-message.p-toast-message-error .p-toast-message-icon {
+    background-color: rgba(234, 87, 87, 1);
+  }
+
+  .p-toast-message.p-toast-message-warn .p-toast-message-icon {
+    background-color: rgba(235, 238, 86, 1);
+    border: solid 3px rgba(23, 23, 23, 1);
+    .p-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .p-toast-message.p-toast-message-info .p-toast-message-icon {
+    background-color: rgba(128, 232, 225, 1);
+  }
+
+  .p-toast-message-icon {
+    color: rgba(23, 23, 23, 1);
+    border-radius: 100%;
+    min-width: 2rem;
+    min-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .p-toast-icon-close {
+    color: rgba(23, 23, 23, 1);
+    width: 1.2rem;
+    height: 1.2rem;
+
+    .p-icon {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+  }
+}
+
+.validator-text {
+  color: rgb(180, 30, 30);
+  font-weight: 600;
+  // -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+  // text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.brawlers-form {
+  background-color: rgba(90, 73, 47, 0.2);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+// lottery
+.numbers {
+  border: solid 5px transparent;
+  top: 45%;
+  left: 40px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns */
+  grid-template-rows: repeat(5, 1fr);
+  /* 5 rows */
+  gap: 2px;
+  /* Gap between grid items */
+  font-size: 35px;
+  div {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.item-image {
+  width: 150px;
+  height: 150px;
+  // border: solid black 2px;
+}

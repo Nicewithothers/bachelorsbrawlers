@@ -1,0 +1,31 @@
+.brawlers-char-option {
+    height: 30px;
+    width: 175px;
+    padding: 2px;
+    font-size: 20px;
+    line-height: 33px;
+    background-color: rgba(101, 69, 31, 1);
+    border: solid 2px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: rgba(216, 216, 216, 1);
+}
+
+.brawlers-char-icon-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: rgba(200, 174, 125, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: rgba(0,0,0,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brawlers-char-icon-btn:hover:not(:disabled) {
+    cursor: pointer;
+    opacity: 0.8;
+}

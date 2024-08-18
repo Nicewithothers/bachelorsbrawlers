@@ -1,0 +1,22 @@
+dexterity,endurance,intelligence,luck,maxHp,name,damageRange,image,motto,dungeonLevel
+12,8,10,5,50,Szamitogep halozatok,20,szamitogepes_halozatok, Itt kezdődik a DEVOPS (És a pokolban van a vége),1
+20,15,20,10,70,Operacios rendszerek,25,operacios_rendszerek, Ha azthiszed hogy itt Windows lesz tévedsz,2
+25,20,25,15,90,Web tervezes,30,web_tervezes, A piacon azért nem használ senki php-t mert túl advanced,3
+35,30,35,25,130,Diszkret matematika I,40,diszkret_matek, 3 év múlva már a tárgyra sem emlékszel - nem hogy mi volt itt,4
+40,35,40,30,150,Architekturak,45,architekturak, Most megismerheted a processzorok sötét világát,5
+45,40,45,35,170,Fizika I,50,fizika, Ez a kedvenc tárgyam by: sohasenki,6
+50,45,50,40,190,Programozas alapjai,55,programozas_alapjai, Na és hol a Mátrix-nyeregpont,7
+55,50,55,45,210,Logika,60,logika, Idhővel elvégezhető kurzus,8
+60,55,60,50,230,Kalkulus I,65,kalkulus, Nem szégyen sírni,9
+70,60,70,60,250,Köszi ,70,koszi, Biztos volt már aki élvezte,10
+80,65,80,70,270,Prog I,75,programozas_1, A programozás legJava,11
+90,70,90,80,290,Prog II,80,programozas_2, A mondák szerint volt már akinek elsőre meglett,12
+100,80,100,90,310,Alkalmazás fejlesztés I,85,alkfejl1, Itt már lehet hasznosat is tanulsz,13
+110,90,110,100,330,RF I,90,rf1, Mindig lesz egy fék a csapatban,14
+120,100,120,110,350,Mobil alkalmazás fejlesztés,95,mobilalk, Ha azthiszed mobilon könnyebb akkor tévedsz,15
+130,110,130,120,370,Irányítástechnika,100,iranyitastechnika, Itt az X mindent is jelenthet,16
+140,110,130,120,370,Elektronika,110,elektronika, Csak egy rosszul bedugott vezeték és már leégetted a labort,17
+150,110,150,120,370,Bonya,120,bonya, Polinom időben elvégezhető kurzus,18
+150,110,150,140,370,Fonya,120,fonya, Ezen a ponton gondolkodsz el hogy rossz szakot válaszottál,19
+160,120,150,140,370,Agilis,120,agilis, mindenki tudja hogy kell - mégse csinálja senki így,20
+200,120,200,140,370,ZV,120,zv, Aki idáig eljut annak már ez sima. A kivitélek meg erősítik a szabályt,21

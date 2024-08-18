@@ -1,0 +1,53 @@
+<div class="container">
+  <img class="bg-img" src="../../assets/images/posta.webp" alt="Background Image">
+  <div class="mail-layout">
+    <div class="mail-list-panel">
+      <h1>Beérkezett üzenetek</h1>
+      <hr class="separator">
+      <div class="mail-list-container">
+        <table class="mail-table">
+          <tbody>
+          <ng-container *ngFor="let mail of displayedMails; let i = index">
+            <tr  (click)="onButtonClicked('map_button.mp3')" (click)="selectMail(mail)" [class.selected]="selectedMail === mail" [class.unseen]="!mail.seen" class="mail-row">
+              <td>{{ mail.subject }}</td>
+            </tr>
+          </ng-container>
+          <!-- Add empty rows to ensure there are always 11 lines -->
+          <ng-container *ngFor="let empty of [].constructor(11 - displayedMails.length)">
+            <tr class="mail-row empty-row">
+              <td>&nbsp;</td>
+            </tr>
+          </ng-container>
+          </tbody>
+        </table>
+      </div>
+      <hr class="separator bottom-separator">
+      <div class="pagination">
+        <button class="arrow left" (click)="prevPage()" (click)="onButtonClicked('map_button.mp3')">&#9664;</button>
+        <button class="arrow right" (click)="nextPage()" (click)="onButtonClicked('map_button.mp3')">&#9654;</button>
+      </div>
+    </div>
+    <div class="mail-details-panel">
+      <h1></h1>
+      <hr class="separator">
+      <div class="detail-row">
+        <strong>Feladó:</strong> {{ selectedMail.sender }}
+      </div>
+      <hr class="short-separator">
+      <div class="detail-row">
+        <strong>Tárgy:</strong> {{ selectedMail.subject }}
+      </div>
+      <hr class="short-separator">
+      <div class="detail-row">
+        <strong>Időpont:</strong> {{ selectedMail.created }}
+      </div>
+      <hr class="short-separator">
+      <div class="message-box">
+        {{ selectedMail.message }}
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

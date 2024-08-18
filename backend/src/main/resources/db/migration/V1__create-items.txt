@@ -1,0 +1,43 @@
+INSERT INTO item ( id, item_category, name, rarity, damage_range, armor) 
+VALUES 
+(nextval('item_seq'), 'WEAPON', 'JATE-s szórólap', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'WEAPON', 'Drága billentyűzet', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'WEAPON', 'Egér golyók zokniban', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'WEAPON', 'RAM bökő', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'WEAPON', 'Géppisztoly', 'LEGENDARY', NULL, NULL),
+
+(nextval('item_seq'), 'HEAD', 'Burger King-es papírkorona', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'HEAD', 'Macsakafüles Gamer RGB fejhallgató', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'HEAD', 'Vonalkódos alsógatya', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'HEAD', 'Pit Viper napszemüveg', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'HEAD', 'Diplomaosztós kalap', 'LEGENDARY', NULL, NULL),
+
+(nextval('item_seq'), 'UPPER', 'SZTE-s pulcsi', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'UPPER', 'Animés póló', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'UPPER', 'Gólyatáboros póló', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'UPPER', 'Fehér trikó', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'UPPER', 'Ing és nyakkendő', 'LEGENDARY', NULL, NULL),
+
+(nextval('item_seq'), 'LOWER', 'Mackó nadrág', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'LOWER', 'Rövid nadrág', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'LOWER', 'Farmer nadrág', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'LOWER', 'Gatya nélkül', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'LOWER', 'Kinőtt ballagási öltönynadrág', 'LEGENDARY', NULL, NULL),
+
+(nextval('item_seq'), 'BELT', 'Cipőfűző', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'BELT', 'Bicikli zár', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'BELT', 'UTP kábel', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'BELT', 'Beer Belt', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'BELT', 'Bajnoki öv', 'LEGENDARY', NULL, NULL),
+
+(nextval('item_seq'), 'RING', 'Gumicukor', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'RING', 'Topjoy-os kupak', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'RING', 'Smart Ring', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'RING', 'Chio Taccos chips', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'RING', 'Az Egy Gyűrű', 'LEGENDARY', NULL, NULL),
+
+(nextval('item_seq'), 'SPECIAL', 'ChatGPT előfizetés', 'COMMON', NULL, NULL),
+(nextval('item_seq'), 'SPECIAL', 'Bootable Linux USB drive', 'RARE', NULL, NULL),
+(nextval('item_seq'), 'SPECIAL', 'Dékáni méltányossági', 'UNIQUE', NULL, NULL),
+(nextval('item_seq'), 'SPECIAL', 'Kőbányai világos', 'MASTER', NULL, NULL),
+(nextval('item_seq'), 'SPECIAL', 'Diploma', 'LEGENDARY', NULL, NULL);

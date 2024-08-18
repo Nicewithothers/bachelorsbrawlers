@@ -1,0 +1,13 @@
+ALTER TABLE monster ADD COLUMN IF NOT EXISTS motto VARCHAR;
+
+INSERT INTO monster (id,dexterity,endurance,intelligence,luck,max_hp,name,damage_range,image,dungeon_level,motto)
+VALUES
+    (1,12,8,10,5,50,'Számítógép hálózatok',20,'szamitogepes_halozatok',1,'Itt kezdődik a DEV-OPS (És a pokolban van a vége)'),
+    (2,20,15,20,10,70,'Operációs rendszerek',25,'operacios_rendszerek',3,'Nem, nem fogunk arch linuxot telepíteni'),
+    (3,25,20,25,15,90,'Webtervezés',30,'web_tervezes',2,'How to center a div?'),
+    (4,35,30,35,25,130,'Diszkrét matematika I',40,'diszkret_matek',4,'3 év múlva már a tárgyra sem emlékszel, nem hogy mit tanultál'),
+    (5,40,35,40,30,150,'Architektúrák',45,'architekturak',5,'Így működik a számító'),
+    (6,45,40,45,35,170,'Fizika I',50,'fizika',6,'"Ez a kedvenc tárgyam" - mondta soha, senki'),
+    (7,50,45,50,40,190,'Programozás alapjai',55,'programozas_alapjai',7,'Mátrix-nyeregpont'),
+    (8,55,50,55,45,210,'Kalkulus',60,'kalkulus',8,'Nem szégyen sírni'),
+    (9,60,55,60,50,230,'Logika I',65,'logika',9,'Idhővel elvégezhető kurzus');

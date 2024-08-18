@@ -1,0 +1,190 @@
+#app-container {
+  display: flex;
+  height: 100%;
+}
+
+#app-page {
+  width: 100%;
+  height: 100%;
+}
+
+.register-heading {
+  color: darkgoldenrod;
+}
+
+.small-break {
+  margin-bottom: 20px;
+}
+
+.big-break {
+  margin-bottom: 40px;
+}
+
+.register-button {
+  padding: 15px 40px;
+}
+
+.login-link {
+  color: darkgoldenrod;
+}
+
+// --Shop Style Below--
+
+$shop-background-color: #d9d9d9;
+
+.shop-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.character-overview-container {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 0px;
+}
+
+.shop-panel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 20px;
+  
+}
+
+.shopkeeper-container {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.new-goods-container {
+  --button_radius: 10px;
+  --button_color: #c8ae7d;
+  --button_outline_color: #000000;
+  height: auto;
+  width: 150px;
+  font-size: 20px;
+  margin: 10px auto 10px;
+  font-weight: 900;
+  border: none;
+  padding: 0px;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.new-goods-button {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.25em 0.6em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  font-weight: bold;
+}
+
+.new-goods-button:hover {
+  transform: translateY(-0.33em);
+}
+
+.new-goods-button:active {
+  transform: translateY(0);
+}
+
+.shop-background {
+  width: fit-content;
+  align-self: center;
+}
+
+.shop-items-container {
+  background-color: rgba(234, 198, 150, 0.95);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  position: relative;
+  display: grid;
+  grid-auto-flow: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: solid 3px #765827;
+
+
+}
+.shop.item {
+  position: relative;
+}
+
+
+.item-image {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  background: $shop-background-color;
+  cursor: pointer;
+}
+
+// --Shop Style Ends--
+
+// -- Inventory Style Below --
+
+.inventory-container {
+  min-height: 256px;
+  min-width: 616px;
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  gap: 10px;
+  background-color: rgba(234, 198, 150, 0.9);
+  border: solid 3px #765827;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  padding: 10px;
+  margin: 5px;
+}
+
+.inventory-item {
+  width: 110px;
+  height: 110px;
+  border: solid black 1px;
+  background: #c8ae7d;
+  position: relative;
+  // background-image: ;
+
+  img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+// -- Inventory Style Ends --
+
+// -- Tooltips Style Below --
+
+.tooltip-container {
+  position: absolute;
+  background-color: #C8AE7D;
+  border: solid 2px #765827;
+  border-radius: 10px;
+  width: 170px;
+  padding: 10px;
+  opacity: 0.9;
+}

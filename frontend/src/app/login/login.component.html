@@ -1,0 +1,50 @@
+<div class="col between">
+  <img class="bg-img" ngSrc="../../assets/images/hszi.webp" fill priority/>
+  <div class="col center content">
+    <span class="brawlers-title">Bachelors Brawlers</span>
+    <span class="brawlers-text-large">Bejelentkezés</span>
+    <form class="brawlers-form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <input
+        class="brawlers-field"
+        type="text"
+        placeholder="Felhasználónév"
+        formControlName="username"
+      />
+      @if (
+        loginForm.get("username")?.dirty && loginForm.get("username")?.invalid
+      ) {
+        <small class="validator-text">A felhasználónévnek legalább 4 karakter hosszúnak kell lennie.</small>
+      }
+      <br class="big-break"/>
+      <input
+        class="brawlers-field"
+        type="password"
+        placeholder="Jelszó"
+        formControlName="password"
+      />
+      @if (
+        loginForm.get("password")?.dirty && loginForm.get("password")?.invalid
+      ) {
+        <small class="validator-text">A jelszónak legalább 6 karakter hosszúnak kell lennie.</small>
+      }
+      <app-separator [width]="450" orientation="horizontal"></app-separator>
+      <button class="brawlers-btn" type="submit" [disabled]="loginForm.invalid" (click)="onButtonClicked('map_button.mp3')" >
+        Belépek
+      </button>
+      <app-separator [width]="300" orientation="horizontal"></app-separator>
+      <span class="brawlers-text-large"
+      >Még nem jársz órákra?<a
+        class="brawlers-subtitle brawlers-auth-switch"
+        routerLink="/register"
+        (click)="onButtonClicked('map_button.mp3')" 
+      >
+          Iratkozz be most!</a
+      ></span
+      >
+    </form>
+  </div>
+  <div class="brawlers-icon-container">
+    <i class="brawlers-icon-btn pi pi-cog" (click)="onButtonClicked('map_button.mp3')" ></i>
+    <i class="brawlers-icon-btn pi pi-question" (click)="redirectToYoutube()" (click)="onButtonClicked('map_button.mp3')" ></i>
+  </div>
+</div>

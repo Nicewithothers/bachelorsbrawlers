@@ -1,0 +1,172 @@
+.characterbox {
+  width: 486px;
+  height: 692px;
+  top: 36px;
+  left: 292px;
+  background-color: rgba(234, 198, 150, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  border: solid 3px #765827;
+
+  .mainboxcontainer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .sideboxcontainer {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .imagecontainer {
+      position: relative;
+      width: 260px;
+      height: 275px;
+      border: 2px solid black;
+      background: center center no-repeat;
+      background-size: cover;
+    }
+
+    .sidebox {
+      position: relative;
+      display: flex;
+      width: 83px;
+      height: 83px;
+      outline: 1px solid black;
+      background-color: #c8ae7d;
+    }
+  }
+
+  .bottomboxcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    .bottombox {
+      position: relative;
+      width: 83px;
+      height: 83px;
+      border: 1px solid black;
+      background-color: #c8ae7d;
+    }
+
+    .separator {
+      rotate: 90deg;
+      height: 10.5px;
+    }
+  }
+
+  .statcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 0px;
+    font-size: 25px;
+
+    .statbox {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      height: 50px;
+
+      .right-side {
+        display: grid;
+        position: relative;
+        grid-template-columns: 2fr 6fr 1fr;
+        height: 50px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .add-button {
+        --button_radius: 10px;
+        --button_color: #c8ae7d;
+        --button_outline_color: #000000;
+        font-size: 20px;
+        margin: 0 auto;
+        font-weight: 900;
+        border: none;
+        padding: 0px;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+      }
+
+      .button_top {
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 0.25em 0.6em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+        cursor: pointer;
+      }
+
+      button:hover .button_top {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+
+      button:active .button_top {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
+
+      .cost {
+        text-align: right;
+      }
+    }
+  }
+
+  #weapon {
+    background-image: url("../../../assets/images/items/placeholders/weapon.png");
+    background-size: cover;
+
+  }
+
+  #fight_animation {
+    background-image: url("../../../assets/images/items/placeholders/fight_animation.png");
+    background-size: cover;
+  }
+
+  #head {
+    background-image: url("../../../assets/images/items/placeholders/head.png");
+    background-size: cover;
+  }
+
+  #upper {
+    background-image: url("../../../assets/images/items/placeholders/upper.png");
+    background-size: cover;
+  }
+
+  #lower {
+    background-image: url("../../../assets/images/items/placeholders/lower.png");
+    background-size: cover;
+  }
+
+  #belt {
+    background-image: url("../../../assets/images/items/placeholders/belt.png");
+    background-size: cover;
+  }
+
+  #ring {
+    background-image: url("../../../assets/images/items/placeholders/ring.png");
+    background-size: cover;
+  }
+
+  #special {
+    background-image: url("../../../assets/images/items/placeholders/special.png");
+    background-size: cover;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="yearbook-container">
+  <img class="bg-img" src="../../assets/images/yearbook-background.webp" alt="Yearbook Background">
+  <div class="yearbook-layout">
+    <div class="student-list-panel">
+      <div class="student-list-container">
+        <img class="bg-img yearbook-img" src="../../assets/images/yearbook.webp" alt="Yearbook">
+
+        <div class="student-list">
+          <div class="student-list-body">
+            @for (student of displayedStudents; track student) {
+              <div class="student-list-item">
+                <div class="student-list-item-img">
+                  <img [src]="student.picture" alt="Student Image">
+                </div>
+                <div class="student-list-item-info">
+                  <p>{{ student.name }}</p>
+                  <p>{{ student.heroLevel }}</p>
+                  <p>{{ student.defeatTime }}</p>
+                </div>
+              </div>
+          }
+            <div class="page-stuff">
+              <button class="page-button prev-page"  (click)="onButtonClicked('map_button.mp3')">&lt;</button>
+              <span class="page-number">1</span>
+              <span class="page-number">2</span>
+              <button class="page-button next-page"  (click)="onButtonClicked('map_button.mp3')">&gt;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

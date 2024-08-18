@@ -1,0 +1,46 @@
+<div class="col between">
+  <img class="bg-img" ngSrc="../../assets/images/nek.webp" fill priority />
+  <div class="col center">
+    <span class="brawlers-title">NEK adatlap</span>
+    <div class="row evenly">
+      <div class="col center content">
+        <!-- <app-stepper label="Bőrszín" [(value)]="selectedSkin"></app-stepper> -->
+        <app-stepper label="Orr" [(value)]="selectedNose" (click)="onButtonClicked('map_button.mp3')"></app-stepper>
+        <app-stepper label="Fül" [(value)]="selectedEar" (click)="onButtonClicked('map_button.mp3')"></app-stepper>
+        <app-stepper label="Kiegészítő" [(value)]="selectedAccessory" (click)="onButtonClicked('map_button.mp3')"></app-stepper>
+      </div>
+      <div #avatar class="middle">
+        <img src="../../assets/images/karakter/ful{{selectedEar}}.svg" />
+        <img src="../../assets/images/karakter/test.svg" />
+        <img src="../../assets/images/karakter/haj{{selectedHair}}.svg" />
+        <img src="../../assets/images/karakter/kieg{{selectedAccessory}}.svg" />
+        <img src="../../assets/images/karakter/orr{{selectedNose}}.svg" />
+        <img src="../../assets/images/karakter/szaj{{selectedMouth}}.svg" />
+        <img src="../../assets/images/karakter/szem{{selectedEye}}.svg" />
+
+        <!-- <img src="../../assets/images/placeholder.png" alt="placeholder"/> -->
+      </div>
+      <div class="col center content">
+        <app-stepper label="Haj" [(value)]="selectedHair" (click)="onButtonClicked('map_button.mp3')"></app-stepper>
+        <!-- <app-stepper label="Hajszín" [(value)]="selectedHairColor"></app-stepper> -->
+        <app-stepper label="Szem" [(value)]="selectedEye" (click)="onButtonClicked('map_button.mp3')"></app-stepper>
+        <app-stepper label="Száj" [(value)]="selectedMouth" (click)="onButtonClicked('map_button.mp3')"></app-stepper>
+      </div>
+    </div>
+    <form class="col" style="gap: 10px; margin-bottom: 16px;" [formGroup]="heroForm" (ngSubmit)="create()">
+      <input class="brawlers-field" type="text" placeholder="Hallgató neve" formControlName="heroName">
+      @if (
+        heroForm.get("heroName")?.dirty && heroForm.get("heroName")?.invalid
+      ) {
+        <small class="validator-text">A hallgató nevének legalább 4 karakter hosszúnak kell lennie.</small>
+      }
+      <button class="brawlers-btn" type="submit" [disabled]="heroForm.invalid" (click)="onButtonClicked('map_button.mp3')">
+        Tovább
+      </button>
+    </form>
+  </div>
+  <div class="brawlers-icon-container">
+    <i class="brawlers-icon-btn pi pi-cog"></i>
+    <i class="brawlers-icon-btn pi pi-question"></i>
+  </div>
+</div>

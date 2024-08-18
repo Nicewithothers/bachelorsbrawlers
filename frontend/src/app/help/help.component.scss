@@ -1,0 +1,78 @@
+.helpmenu-container {
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: yellow;
+  margin-bottom: 2vh;
+  overflow: hidden;
+}
+
+.helpmenu-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#map {
+  background-image: url('../../assets/images/map.webp');
+}
+
+#tavern {
+  background-image: url('../../assets/images/marster.webp');
+  background-position-y: 383px;
+}
+
+#arena {
+  background-image: url('../../assets/images/negylepcsos.webp');
+  background-position-y: 1800px;
+}
+
+#arkadshop {
+  background-image: url('../../assets/images/arkad.webp');
+  background-position-y: 321px;
+}
+
+#dohishop {
+  background-image: url('../../assets/images/dohi.webp');
+  background-position-y: 1889px;
+  background-position-x: -173px;
+}
+
+#vizsga {
+  background-image: url('../../assets/images/kazamata_background.webp');
+  background-position-y: 1969px;
+}
+
+#mail {
+  background-image: url('../../assets/images/posta.webp');
+  background-position-y: 1889px;
+  background-position-x: -266px;
+
+}
+
+#leaderboard {
+  background-image: url('../../assets/images/egyetem.webp');
+  background-position-y: 1889px;
+}
+
+#yearbook {
+  background-image: url('../../assets/images/map.webp');
+  background-position-y: 1889px;
+  //TODO
+}
+
+#gambling {
+  background-image: url('../../assets/images/lottozo.webp');
+  background-position-y: 1925px;
+  background-position-x: -348px;
+}

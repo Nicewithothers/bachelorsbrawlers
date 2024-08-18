@@ -1,0 +1,8 @@
+INSERT INTO booster_item (id, name, description, effectiveness, price)
+VALUES
+    (1, 'Capuccino', 'Az egyetem habos oldala', 0.1, 1),
+    (2, 'Presszó kávé', 'Szigorúan a budi büféből!', 0.2, 2),
+    (3, 'Ír kávé', 'Amikor már a kávéba is alkoholt kell rakni...', 0.3, 3),
+    (4, 'Hell', 'Ez nekem csak víz', 0.4, 4),
+    (5, 'Monster', 'Kihozza belőled a szörnyet!', 0.5, 5),
+    (6, 'Red bull', 'Még ha bukott leszel, akkor is szárnyat ad!', 0.6, 6);

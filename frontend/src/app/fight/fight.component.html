@@ -1,0 +1,49 @@
+<div class="fight-container">
+  <i class="brawlers-icon-btn pi pi-arrow-left" (click)="goBack()"></i>
+  <img class="bg-img" src="../../assets/img/szecheny.png" />
+  @if (!loading) {
+  <h1 class="brawlers-title">Fight Arena</h1>
+  <div class="combatants">
+    <div class="player">
+      <div [@shakeHero]="shakeHero ? 'shakeHero' : 'none'" class="img-wrapper">
+        <img [src]="hero.picture" alt="Player Avatar" width="500" height="500" />
+        <span *ngIf="heroText" [@heroHitText] class="animated-text" [ngStyle]="{'top.%': heroText.y, 'left.%': heroText.x}">
+          {{ heroText.message }}
+        </span>
+      </div>
+      <div class="character-info">
+        <p>{{ hero.name }}</p>
+        <div class="health-bar">
+          <div class="health-fill" [style.width.%]="heroHealth">
+            <div class="health-text">{{this.heroHealth}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="versus">
+      <canvas id="attack-canvas" [riv]="riv" height="600" fit="cover" alignment="center" appDynamicCanvas>
+        <riv-animation [name]="timeLine" [play]="start"></riv-animation>
+      </canvas>
+    </div>
+    <div class="enemy">
+      <div [@shakeEnemy]="shakeEnemy ? 'shakeEnemy' : 'none'" class="img-wrapper">
+        <img [src]="enemy.image" alt="Enemy Avatar" width="500" height="500" />
+        <span *ngIf="enemyText" [@enemyHitText] class="animated-text" [ngStyle]="{'top.%': enemyText.y, 'left.%': enemyText.x}">
+          {{ enemyText.message }}
+        </span>
+      </div>
+      <div class="character-info">
+        <p>{{ enemy.displayName }}</p>
+        <div class="health-bar">
+          <div class="health-fill" [style.width.%]="enemyHealth">
+            <div class="health-text">{{enemyHealth}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="startFight()"  (click)="onButtonClicked('map_button.mp3')" class="brawlers-btn">Harc</button>
+  } @else {
+  <app-loading></app-loading>
+  }
+</div>

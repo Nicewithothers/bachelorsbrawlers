@@ -1,0 +1,48 @@
+ALTER TABLE item
+ADD COLUMN IF NOT EXISTS file_name VARCHAR(100);
+
+UPDATE item
+SET file_name = CASE 
+    WHEN name = 'JATE-s szórólap' THEN 'jate_szorolap'
+    WHEN name = 'Drága billentyűzet' THEN 'draga_billentyuzet'
+    WHEN name = 'Egér golyók zokniban' THEN 'eger_golyok_zokniban'
+    WHEN name = 'RAM bökő' THEN 'ram_boko'
+    WHEN name = 'Géppisztoly' THEN 'geppisztoly'
+
+    WHEN name = 'Burger King-es papírkorona' THEN 'burgerking_korona'
+    WHEN name = 'Macsakafüles Gamer RGB fejhallgató' THEN 'macskafules_gamer_rbp_fejhallgato'
+    WHEN name = 'Vonalkódos alsógatya' THEN 'vonalkodos_alsogatya'
+    WHEN name = 'Pit Viper napszemüveg' THEN 'pit_viper_napszemuveg'
+    WHEN name = 'Diplomaosztós kalap' THEN 'diplomaosztos_kalap'
+
+    WHEN name = 'SZTE-s pulcsi' THEN 'szte_pulcsi'
+    WHEN name = 'Animés póló' THEN 'anime_polo'
+    WHEN name = 'Gólyatáboros póló' THEN 'golyataboros_polo'
+    WHEN name = 'Fehér trikó' THEN 'feher_triko'
+    WHEN name = 'Ing és nyakkendő' THEN 'ing_es_nyakkendo'
+
+    WHEN name = 'Mackó nadrág' THEN 'mackonadrag'
+    WHEN name = 'Rövid nadrág' THEN 'rovidnadrag'
+    WHEN name = 'Farmer nadrág' THEN 'farmer_nadrag'
+    WHEN name = 'Gatya nélkül' THEN 'gatya_nelkul'
+    WHEN name = 'Kinőtt ballagási öltönynadrág' THEN 'kinott_ballagasi_oltonynadrag'
+
+    WHEN name = 'Cipőfűző' THEN 'cipofuzo'
+    WHEN name = 'Bicikli zár' THEN 'biciklizar'
+    WHEN name = 'UTP kábel' THEN 'utp_kabel'
+    WHEN name = 'Beer Belt' THEN 'beer_belt'
+    WHEN name = 'Bajnoki öv' THEN 'bajnoki_ov'
+
+    WHEN name = 'Gumicukor' THEN 'gumicukor'
+    WHEN name = 'Topjoy-os kupak' THEN 'top_joy_kupak'
+    WHEN name = 'Smart Ring' THEN 'okos_gyuru'
+    WHEN name = 'Chio Taccos chips' THEN 'chio_taccos_chips'
+    WHEN name = 'Az Egy Gyűrű' THEN 'az_egy_gyuru'
+    
+    WHEN name = 'ChatGPT előfizetés' THEN 'chatgpt_elofizetes'
+    WHEN name = 'Bootable Linux USB drive' THEN 'bootable_linux_usb_drive'
+    WHEN name = 'Dékáni méltányossági' THEN 'dekanyi_meltanyossagi'
+    WHEN name = 'Kőbányai világos' THEN 'kobanyai_vilagos'
+    WHEN name = 'Diploma' THEN 'diploma'
+    ELSE NULL
+    END;

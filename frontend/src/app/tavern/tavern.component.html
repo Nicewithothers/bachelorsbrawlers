@@ -1,0 +1,59 @@
+<div class="tavern-container">
+  <img class="bg-img" ngSrc="../../assets/images/marster.webp" fill priority />
+  @if (hero) {
+    <div class="background-rectangle">
+      @if (quests && quests.length > 0) {
+        <div class="choose-opponent">Válassz küldetést:</div>
+        <div class="characters-container">
+          @for (quest of quests; track $index) {
+            <div
+              class="quest-selection"
+              [class.selected]="this.selectedQuest === quest"
+              (click)="onSelectQuest(quest)"
+              (click)="onButtonClicked('map_button.mp3')"
+            >
+              <img
+                [src]="quest.image"
+                class="character-placeholder"
+                [alt]="quest.monsterName"
+              />
+              <div>Ellenség: {{ quest.monsterName }}</div>
+              <div>Xp: {{ quest.xp }}</div>
+              <div>Költség: {{ quest.cost }}</div>
+              @if (quest.reward != null) {
+                <div>Jutalom: {{ quest.reward.name }}</div>
+              } @else {
+                <div>Jutalom: nincs</div>
+              }
+              @switch (quest.monsterType) {
+                @case ("EASY_MONSTER") {
+                  <div>Nehézség: Könnyű</div>
+                }
+                @case ("MEDIUM_MONSTER") {
+                  <div>Nehézség: Közepes</div>
+                }
+                @case ("HARD_MONSTER") {
+                  <div>Nehézség: Nehéz</div>
+                }
+              }
+            </div>
+          }
+        </div>
+      } @else {
+        <app-loading></app-loading>
+      }
+    </div>
+    <div class="stamina-bar">
+      <div class="adventure-bar" [style.width.%]="this.hero.adventure">
+        <div class="bar-text">Kalandvágy: {{ hero.adventure }}</div>
+      </div>
+    </div>
+    <div class="bottom-wrapper" [style.visibility]="quests && quests.length > 0 ? 'visible' : 'hidden'">
+      <button class="explore-button" (click)="chooseQuest()" (click)="onButtonClicked('map_button.mp3')">
+        Küldetés kiválasztása
+      </button>
+    </div>
+  } @else {
+    <app-loading></app-loading>
+  }
+</div>
