@@ -1,7 +1,7 @@
 variables:
-  VERCEL_TOKEN: "ITBfefTK9pCOBrABCllT1fWD"
-  HEROKU_APP_NAME: "bachelors-brawlers-szte"
-  HEROKU_PRODUCTION_KEY: "ad9945cb-e037-42c7-8bbe-95d56763766f"
+  VERCEL_TOKEN: ""
+  HEROKU_APP_NAME: ""
+  HEROKU_PRODUCTION_KEY: ""
 
 stages:
   # - frontend-code-check
